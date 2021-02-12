@@ -1,0 +1,211 @@
+/*These rules apply to the whole site*/
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 20px;
+}
+/*These rules apply to all hyperlinks*/
+a{
+    text-decoration: none;
+    color: rgb(121, 120, 120);
+}
+/*Internal margin on both sides of header, section and footer*/
+.internal-margin{
+    padding: 0px 50px;
+}
+    /*Header contains: menu, nav and social*/
+    .header{
+        background: url(../images/header.jpg);
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 20% 60% 20%;
+        height: 400px;
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        border-bottom: #fff 10px solid;
+        align-items: center;
+    }
+        .logo{
+            display: flex;
+            flex-direction: column nowrap;
+            justify-content: center;
+            justify-items: center;
+        }
+            .logo img{
+                max-width: 100%;
+                height: 80px;        
+            }
+           .menu{
+                height: 150px;
+                font-size: 14px;
+                letter-spacing: 1px;
+                word-spacing: 30px; 
+                display: flex;
+                flex-flow: row nowrap;  
+                align-items: center;       
+            }
+                /*Nav icons*/
+                .menu i{
+                    margin-right: 5px;
+                    margin-left: 10px;
+                }
+                .menu a:hover{
+                    color: #ee7463;
+                }
+            .social{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                height: 150px;
+                display: flex;
+                flex-flow: column nowrap;  
+                justify-content: center;
+                align-items: flex-start;
+            }
+                /*Social icons*/
+                .social i{
+                    word-spacing: 30px;
+                }
+                .social a:hover{
+                    color: #ee7463;
+                }
+        .slogan{
+            background: rgba(0,0,0,.05);
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }    
+            /*"Disfruta de la experiencia de otros viajeros"*/
+            .h1{
+                color: #ee7463;
+                font-family:'Libre Baskerville', serif;
+                font-size: 15px;
+                text-align: center;   
+                padding-top: 50px;      
+            }           
+    .section{
+        background: #dad8d8;
+        border-bottom: #fff 10px solid;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 35% 35% auto;
+
+    }
+        /*"Four articles with a bottom navigation"*/
+        .articles{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+        }
+            .article{
+                background: white;
+                border: #dad8d8 10px solid;
+                padding-bottom: 10px;                
+            }
+            .article img{
+                width: 100%;
+            }
+            .pink-block{
+                background-color: #ee7463;
+                height: 40px;
+            
+            }
+            .image-and-block-container{
+                display: flex;
+                flex-flow: column nowrap;
+                border:#f7f7f7 5px solid;
+                
+            }
+             /*"Article's published date"*/      
+             h3{
+                color: #fff;
+                font-size: 11px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-align: left;
+                padding-left: 10px;
+             }
+            /*"Article's title"*/ 
+            h2{
+                color: #fff;
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-align: left;
+                text-transform: uppercase;
+                padding-left: 10px;
+             }
+    /*"Article's intro"*/ 
+    p{
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 15px;
+        text-align: left;
+        padding: 0px 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .article a{
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding-left: 20px;   
+    }
+            .navigation{
+                background: #ee7463;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                flex: 1 1 100%;
+                display: grid;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-template-rows: 1;
+                grid-template-columns: (repeat(6 fr));
+                display: inline-block
+                }
+                    .navigation a{
+                        color: #fff;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        padding: 10px;
+                        letter-spacing: 1px;
+                    }
+        /*"Publicity right section"*/            
+        .aside{
+            background: #dad8d8;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+        }    
+            .advertisement{
+                border: #dad8d8 10px solid;
+            }
+  
+    .footer{
+        background: #dad8d8;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .footer-navigation{
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding-left: 10px;
+        }

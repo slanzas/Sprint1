@@ -1,0 +1,275 @@
+/*These rules apply to the whole site*/
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 20px;
+}
+/*These rules apply to all hyperlinks*/
+a{
+    text-decoration: none;
+    color: rgb(121, 120, 120);
+}
+/*Father contains the three main containers: header, section and footer*/
+.father{
+    display: flex;
+    flex-flow: column nowrap;
+}
+/*Internal margin on both sides of header, section and footer*/
+.internal-margin{
+    padding: 0px 50px;
+}
+    /*Header contains: menu, nav and social*/
+    .header{
+        background: url(../images/header.jpg);
+        display: flex;
+        flex-flow: column nowrap;
+        height: 300px;
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        border-bottom: #fff 10px solid;
+    }
+        .menu{
+            display: flex;
+            flex-flow: row nowrap;
+            height: 150px;
+            align-items: center;
+        }
+            .logo{
+                flex: 1 1 auto;
+                height: 70px;
+            }
+                .logo img{
+                    max-width: 100%;
+                    height: 70px;
+                }
+            .nav{
+                flex: 5 1 auto;
+                font-size: 14px;
+                letter-spacing: 1px;
+                word-spacing: 20px;
+            }
+                /*Nav icons*/
+                .nav i{
+                    margin-right: 10px;
+                }
+                .nav a:hover{
+                    color: #ee7463;
+                }
+            .social{
+                flex: 1 1 auto;
+                height: 70px;
+                max-width: 10px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                padding-right: 100px;
+            }
+                /*Social icons*/
+                .social i{
+                    padding: 5px 0px 5px 0px;
+                }
+                .social a:hover{
+                    color: #ee7463;
+                }
+        .slogan{
+            background: rgba(0,0,0,.05);
+            height: 150px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }    
+            /*"Disfruta de la experiencia de otros viajeros"*/
+            .h1{
+                color: #ee7463;
+                font-family:'Libre Baskerville', serif;
+                font-size: 15px;
+                text-align: center;            
+            }           
+    .section{
+        background: #dad8d8;
+        border-bottom: #fff 10px solid;
+        display: flex;
+    }
+        /*"Four articles with a bottom navigation"*/
+        .articles{
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #f7f7f7; 
+                flex: 1 1 40%;
+                border: #dad8d8 10px solid;
+                padding-bottom: 10px;
+                }
+                .article img{
+                    width: 100%;
+                    border:#f7f7f7 5px solid;
+                }
+                .article a{
+                    font-size: 11px;
+                    letter-spacing: 1px;
+                    padding-left: 20px;   
+                }
+            .navigation{
+                background: #ee7463;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                flex: 1 1 100%;
+                }
+                    .navigation a{
+                        color: #fff;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        padding: 10px;
+                        letter-spacing: 1px;
+                    }
+        /*"Publicity right section"*/            
+        .aside{
+            background: #dad8d8;
+            flex: 1 1 auto;
+        }    
+            .advertisement{
+                flex: 1 1 100%;
+                border: #dad8d8 10px solid;
+            }
+        /*"Article's published date"*/      
+        h3{
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: left;
+            padding-left: 10px;
+            margin-top: -50px;
+            margin-bottom: 10px;
+        }
+        /*"Article's title"*/ 
+        h2{
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: left;
+            text-transform: uppercase;
+            padding-left: 10px;
+        }
+        /*"Article's intro"*/ 
+        p{
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 15px;
+            text-align: left;
+            padding: 0px 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    .footer{
+        background: #dad8d8;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .footer-navigation{
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding-left: 10px;
+        }
+
+/*"Rules for a responsive website - IPad"*/             
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    .section{
+        flex-direction: column;
+    }
+    .aside{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }    
+    .social{
+        padding-right: 0px;
+    }
+    .nav{
+        word-spacing: 10px;
+    }
+        .nav i{
+            margin-right: 2px;
+    }
+}
+/*"Rules for a responsive website - Phone"*/         
+@media (min-width: 320px) and (max-width: 767px){
+    .body{
+        margin-top: 0px;
+    }
+    .internal-margin{
+        padding: 2px
+    }
+    .header{
+        height: 300px;
+    }
+    .menu{
+        height: 150px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+
+    }
+        .logo{
+            align-self: center;
+        }
+        .logo img{
+            
+        }
+        .nav{
+            width: 100%;
+            font-size: 13px;
+            word-spacing: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+            .nav i{
+                display: none;
+            }
+        .social{
+            max-width: 100%;
+            height: 50px;
+            padding: 0px;
+        } 
+    .slogan{
+        margin-bottom: 0px;
+        height: 150px;
+    }  
+        .h1{
+            font-size: 9px;
+        }
+    .section{
+        flex-direction: column;
+        background: #dad8d8;
+    }
+    .articles{
+        flex-direction: column;
+    }
+
+    .navigation{
+        border-bottom: #dad8d8 solid 10px;
+    }
+    .aside{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }  
+}

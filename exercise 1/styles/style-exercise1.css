@@ -1,0 +1,72 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.father{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+         background: #000;
+         display: flex;
+         flex-flow: column nowrap;
+    }
+        .menu{
+            background: #314057;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+            .logo{
+                background: #da5e5b;
+                flex: 1 1 auto;
+            }
+            .nav{
+                background: #da5e5b;
+                flex: 5 1 auto;
+            }
+            .social{
+                background: #da5e5b;
+                flex: 1 1 auto;
+            }
+        .slogan{
+            background: #e1804d;
+        }    
+            .h1{
+                background: #f8d573;
+            }
+    .section{
+         background: #000;
+         display: flex;
+    }
+        .articles{
+            background: #4d4e68;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #356cab;
+                flex: 1 1 40%;
+            }
+            .navigation{
+                background: #7ba2c1;
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: #e54f57;
+            flex: 1 1 auto;
+        }    
+            .advertisement{
+                background: #f8d573;
+            }
+    .footer{
+        background: #000;
+        display: flex;
+        flex-direction: column;
+    }
+        .footer-navigation{
+            background: #f8d573;
+            align-self: stretch;
+        }
